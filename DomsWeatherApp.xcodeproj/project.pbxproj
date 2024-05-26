@@ -84,6 +84,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B4E05DE22C0391E000121D3F /* PBXTargetDependency */,
 			);
 			name = DomsWeatherApp;
 			productName = DomsWeatherApp;
@@ -114,6 +115,9 @@
 				Base,
 			);
 			mainGroup = B4E05DC12C0390BA00121D3F;
+			packageReferences = (
+				B4E05DE02C0391CD00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = B4E05DCB2C0390BA00121D3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +151,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4E05DE22C0391E000121D3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B4E05DE12C0391E000121D3F /* SwiftLintBuildToolPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B4E05DDB2C0390BB00121D3F /* Debug */ = {
@@ -348,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4E05DE02C0391CD00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4E05DE12C0391E000121D3F /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4E05DE02C0391CD00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B4E05DD82C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld */ = {
