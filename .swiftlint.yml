@@ -73,7 +73,6 @@ opt_in_rules:
   #  - implicit_return                                # Prefer implicit returns in closures, functions and getters.
   - implicitly_unwrapped_optional                     # Implicitly unwrapped optionals should be avoided when possible.
   #  - indentation_width                              # Indent code using either one tab or the configured amount of spaces, unindent to match previous indentations. Don't indent the first line.
-  - inert_defer                                       # If defer is at the end of its parent scope, it will be executed right where it is anyway.
   #  - is_disjoint                                    # Prefer using `Set.isDisjoint(with:)` over `Set.intersection(_:).isEmpty`.
   #  - joined_default_parameter                       # Discouraged explicit usage of the default separator.
   #  - large_tuple                                    # Tuples shouldn't have too many members. Create a custom type instead.
@@ -172,12 +171,9 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument          # Parentheses are not needed when declaring closure arguments.
   #  - unowned_variable_capture                          # Prefer capturing references as weak to avoid potential crashes.
   #  - untyped_error_in_catch                         # Catch statements should not declare error variables without type casting.
-  - unused_capture_list                               # Unused reference in a capture list should be removed.
   - unused_closure_parameter                          # Unused parameter in a closure should be replaced with _.
   - unused_control_flow_label                         # Unused control flow label should be removed.
-  - unused_declaration                                # Declarations should be referenced at least once within all files linted.
   - unused_enumerated                                 # When the index or the item is not used, `.enumerated()` can be removed.
-  - unused_import                                     # All imported modules should be required to make the file compile.
   - unused_optional_binding                           # Prefer `!= nil` over `let _ =`
   - unused_setter_value                               # Setter value is not used.
   - valid_ibinspectable                               # @IBInspectable should be applied to variables only, have its type explicit and be of a supported type
@@ -233,6 +229,8 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
  
 # Rules use by 'swiftlint analyze' (experimental)
 analyzer_rules:
+  - unused_declaration                                # Declarations should be referenced at least once within all files linted.
+  - unused_import                                     # All imported modules should be required to make the file compile.
 
 # Reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
 reporter: "xcode"
