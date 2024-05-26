@@ -1,5 +1,5 @@
 {
-  "originHash" : "c4ec9b2f3cc95405c60d193ec2eb9fa0dc79aadffaf3fc433c000cfbc9abbbd3",
+  "originHash" : "789fc4ad4b0cfb797b10021a2a669d7f07cdff39fe61b48bee02896eb091fad4",
   "pins" : [
     {
       "identity" : "collectionconcurrencykit",
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/deliehr/SwiftDevTools",
       "state" : {
-        "revision" : "0a73cd7546bebaf0f4a4ef91707dd37251ad5a6b",
-        "version" : "1.0.3"
+        "revision" : "ecfcbf2c8a2f9e9fd2128e9baa8c435c3a133e2a",
+        "version" : "1.0.5"
       }
     },
     {

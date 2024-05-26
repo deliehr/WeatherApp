@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4BABA3F2C03CB7200CCC336 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABA3E2C03CB7200CCC336 /* Constants.swift */; };
+		B4BABA432C03CDB300CCC336 /* KeyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABA422C03CDB300CCC336 /* KeyConstant.swift */; };
 		B4E05DCE2C0390BA00121D3F /* DomsWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */; };
 		B4E05DD02C0390BA00121D3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCF2C0390BA00121D3F /* ContentView.swift */; };
 		B4E05DD22C0390BB00121D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E05DD12C0390BB00121D3F /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4BABA3E2C03CB7200CCC336 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4BABA422C03CDB300CCC336 /* KeyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyConstant.swift; sourceTree = "<group>"; };
 		B4E05DCA2C0390BA00121D3F /* DomsWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomsWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomsWeatherApp.swift; sourceTree = "<group>"; };
 		B4E05DCF2C0390BA00121D3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				B4E05DD12C0390BB00121D3F /* Assets.xcassets */,
 				B4E05DD82C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld */,
 				B4E05DD32C0390BB00121D3F /* Preview Content */,
+				B4BABA3E2C03CB7200CCC336 /* Constants.swift */,
+				B4BABA422C03CDB300CCC336 /* KeyConstant.swift */,
 			);
 			path = DomsWeatherApp;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E05DD02C0390BA00121D3F /* ContentView.swift in Sources */,
+				B4BABA432C03CDB300CCC336 /* KeyConstant.swift in Sources */,
 				B4E05DCE2C0390BA00121D3F /* DomsWeatherApp.swift in Sources */,
 				B4E05DDA2C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld in Sources */,
+				B4BABA3F2C03CB7200CCC336 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +403,7 @@
 			repositoryURL = "https://github.com/deliehr/SwiftDevTools";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
+				minimumVersion = 1.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
