@@ -7,21 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4E05DCE2C0390BA00121D3F /* DomsWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCD2C0390BA00121D3F /* DomsWeatherAppApp.swift */; };
+		B4E05DCE2C0390BA00121D3F /* DomsWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */; };
 		B4E05DD02C0390BA00121D3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCF2C0390BA00121D3F /* ContentView.swift */; };
 		B4E05DD22C0390BB00121D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E05DD12C0390BB00121D3F /* Assets.xcassets */; };
 		B4E05DD52C0390BB00121D3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E05DD42C0390BB00121D3F /* Preview Assets.xcassets */; };
-		B4E05DD72C0390BB00121D3F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DD62C0390BB00121D3F /* Persistence.swift */; };
 		B4E05DDA2C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DD82C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4E05DCA2C0390BA00121D3F /* DomsWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomsWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E05DCD2C0390BA00121D3F /* DomsWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomsWeatherAppApp.swift; sourceTree = "<group>"; };
+		B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomsWeatherApp.swift; sourceTree = "<group>"; };
 		B4E05DCF2C0390BA00121D3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4E05DD12C0390BB00121D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E05DD42C0390BB00121D3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B4E05DD62C0390BB00121D3F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B4E05DD92C0390BB00121D3F /* DomsWeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DomsWeatherApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,10 +53,9 @@
 		B4E05DCC2C0390BA00121D3F /* DomsWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				B4E05DCD2C0390BA00121D3F /* DomsWeatherAppApp.swift */,
+				B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */,
 				B4E05DCF2C0390BA00121D3F /* ContentView.swift */,
 				B4E05DD12C0390BB00121D3F /* Assets.xcassets */,
-				B4E05DD62C0390BB00121D3F /* Persistence.swift */,
 				B4E05DD82C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld */,
 				B4E05DD32C0390BB00121D3F /* Preview Content */,
 			);
@@ -143,9 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E05DD72C0390BB00121D3F /* Persistence.swift in Sources */,
 				B4E05DD02C0390BA00121D3F /* ContentView.swift in Sources */,
-				B4E05DCE2C0390BA00121D3F /* DomsWeatherAppApp.swift in Sources */,
+				B4E05DCE2C0390BA00121D3F /* DomsWeatherApp.swift in Sources */,
 				B4E05DDA2C0390BB00121D3F /* DomsWeatherApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
