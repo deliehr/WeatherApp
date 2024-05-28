@@ -15,11 +15,11 @@ struct OneCallResponse: Codable {
     var current: Current
 
     enum CodingKeys: String, CodingKey {
+        case current
         case latitude = "lat"
         case longitude = "lon"
         case timeZone = "timezone"
         case timeZoneOffset = "timezone_offset"
-        case current
     }
 
     struct Current: Codable {
@@ -28,13 +28,15 @@ struct OneCallResponse: Codable {
         var pressure: Int16
         var humidity: Int8
         var windSpeed: Float16
+        var datetime: Int32
+        var sunrise: Int32
+        var sunset: Int32
 
         enum CodingKeys: String, CodingKey {
-            case temp
+            case temp, pressure, humidity, sunrise, sunset
             case feelsLikeTemp = "feels_like"
-            case pressure
-            case humidity
             case windSpeed = "wind_speed"
+            case datetime = "dt"
         }
     }
 }

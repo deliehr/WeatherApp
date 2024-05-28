@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DevTools
 
 struct RootView: View {
     @State private var api = WeatherApi.shared
@@ -14,8 +15,8 @@ struct RootView: View {
         VStack {
             if let weather = api.currentWeather {
                 Text(weather.timeZone)
-
                 Text(String(weather.current.temp))
+                Text(weather.current.datetime.asDateString("E, d MMM yyyy HH:mm"))
             }
         }
         .task {

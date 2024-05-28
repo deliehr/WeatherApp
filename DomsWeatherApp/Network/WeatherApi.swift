@@ -5,7 +5,7 @@
 //  Created by Dominik Liehr on 28.05.24.
 //
 
-import UIKit
+import Foundation
 
 @Observable
 class WeatherApi {

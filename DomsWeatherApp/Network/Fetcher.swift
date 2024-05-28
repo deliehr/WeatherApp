@@ -13,7 +13,9 @@ protocol WeatherFetching {
 
 class Fetcher: WeatherFetching {
     func loadToday() async throws -> OneCallResponse {
-        guard let url = URL(string: "\(Constants.apiUrl)/onecall?lat=51.83&lon=8.14&units=metric&lang=de&appid=\(Constants.apiKey)") else { throw NetworkError.badRequestUrl }
+        guard let url = URL(string:
+                                "\(Constants.apiUrl)/onecall?lat=51.83&lon=8.14&units=metric&lang=de&appid=\(Constants.apiKey)")
+        else { throw NetworkError.badRequestUrl }
 
         let (data, response) = try await URLSession.shared.data(from: url)
 

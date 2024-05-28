@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B45B5BAC2C05EFFB00B80339 /* MockJsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BAB2C05EFFB00B80339 /* MockJsons.swift */; };
-		B45B5BAE2C05F33B00B80339 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = B45B5BAD2C05F33B00B80339 /* mock.json */; };
+		B45B5BAE2C05F33B00B80339 /* mock0.json in Resources */ = {isa = PBXBuildFile; fileRef = B45B5BAD2C05F33B00B80339 /* mock0.json */; };
 		B45B5BB22C05F6C000B80339 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BB12C05F6C000B80339 /* WeatherApi.swift */; };
 		B45B5BB62C05F7A400B80339 /* OneCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BB52C05F7A400B80339 /* OneCallResponse.swift */; };
 		B45B5BB82C05F84600B80339 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BB72C05F84600B80339 /* Fetcher.swift */; };
@@ -25,11 +25,12 @@
 		B4E05DF72C03A74700121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05DF62C03A74700121D3F /* DevTools */; };
 		B4E05DFD2C03A89A00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05DFC2C03A89A00121D3F /* DevTools */; };
 		B4E05E012C03ACEF00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05E002C03ACEF00121D3F /* DevTools */; };
+		B4E6826A2C06007A005B907C /* mock1.json in Resources */ = {isa = PBXBuildFile; fileRef = B4E682692C06007A005B907C /* mock1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B45B5BAB2C05EFFB00B80339 /* MockJsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJsons.swift; sourceTree = "<group>"; };
-		B45B5BAD2C05F33B00B80339 /* mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
+		B45B5BAD2C05F33B00B80339 /* mock0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock0.json; sourceTree = "<group>"; };
 		B45B5BB12C05F6C000B80339 /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		B45B5BB52C05F7A400B80339 /* OneCallResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCallResponse.swift; sourceTree = "<group>"; };
 		B45B5BB72C05F84600B80339 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		B4E05DD12C0390BB00121D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E05DD42C0390BB00121D3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4E05DD92C0390BB00121D3F /* DomsWeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DomsWeatherApp.xcdatamodel; sourceTree = "<group>"; };
+		B4E682692C06007A005B907C /* mock1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				B45B5BAB2C05EFFB00B80339 /* MockJsons.swift */,
-				B45B5BAD2C05F33B00B80339 /* mock.json */,
+				B45B5BAD2C05F33B00B80339 /* mock0.json */,
+				B4E682692C06007A005B907C /* mock1.json */,
 			);
 			path = Mockdata;
 			sourceTree = "<group>";
@@ -207,8 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E05DD52C0390BB00121D3F /* Preview Assets.xcassets in Resources */,
+				B4E6826A2C06007A005B907C /* mock1.json in Resources */,
 				B4E05DD22C0390BB00121D3F /* Assets.xcassets in Resources */,
-				B45B5BAE2C05F33B00B80339 /* mock.json in Resources */,
+				B45B5BAE2C05F33B00B80339 /* mock0.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
