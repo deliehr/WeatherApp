@@ -10,5 +10,6 @@ import Foundation
 class Constants {
     private init() {}
 
-    static var apiKey: String? { weatherApiKey }
+    static var apiKey: String { weatherApiKey }
+    static let apiUrl = "https://api.openweathermap.org/data/3.0"
 }

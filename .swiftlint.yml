@@ -98,8 +98,7 @@ opt_in_rules:
   - multiline_literal_brackets                        # Multiline literals should have their surrounding brackets in a new line.
   #  - multiline_parameters                              # Functions and methods parameters should be either on the same line, or one per line.
   #  - multiline_parameters_brackets                     # Multiline parameters should have their surrounding brackets in a new line.
-  - multiple_closures_with_trailing_closure           # Trailing closure syntax should not be used when passing more than one closure argument.
-  - nesting                                           # Types should be nested at most 1 level deep, and statements should be nested at most 5 levels deep.
+  - multiple_closures_with_trailing_closure           # Trailing closure syntax should not be used when passing more than one closure argument.                                          # Types should be nested at most 1 level deep, and statements should be nested at most 5 levels deep.
   #  - nimble_operator                                # Prefer Nimble operator overloads over free matcher functions.
   #  - no_extension_access_modifier                   # Prefer not to use extension access modifiers
   - no_fallthrough_only                               # Fallthroughs can only be used if the `case` contains at least one other statement.
@@ -191,6 +190,7 @@ opt_in_rules:
 
 # Disable rules which are in the default set
 disabled_rules:
+  - nesting
 
 # Custom regex rules
 custom_rules:
