@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/deliehr/SwiftDevTools",
       "state" : {
-        "revision" : "a13870827757f56bbe3a3a66f1cf214de70c622d",
-        "version" : "1.0.6"
+        "revision" : "eaaae67cbf8bcd7456ae1b4544d368b3b5f13f31",
+        "version" : "1.0.7"
       }
     },
     {

@@ -14,6 +14,9 @@
 		B45B5BB82C05F84600B80339 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BB72C05F84600B80339 /* Fetcher.swift */; };
 		B4BABA3F2C03CB7200CCC336 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABA3E2C03CB7200CCC336 /* Constants.swift */; };
 		B4BABA432C03CDB300CCC336 /* KeyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABA422C03CDB300CCC336 /* KeyConstant.swift */; };
+		B4CD4EF02C07736F00034F41 /* mock2.json in Resources */ = {isa = PBXBuildFile; fileRef = B4CD4EEF2C07736F00034F41 /* mock2.json */; };
+		B4CD4EF22C077A1800034F41 /* mock3.json in Resources */ = {isa = PBXBuildFile; fileRef = B4CD4EF12C077A1800034F41 /* mock3.json */; };
+		B4CD4EF42C07C74300034F41 /* mock4.json in Resources */ = {isa = PBXBuildFile; fileRef = B4CD4EF32C07C74300034F41 /* mock4.json */; };
 		B4E05DCE2C0390BA00121D3F /* DomsWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */; };
 		B4E05DD02C0390BA00121D3F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E05DCF2C0390BA00121D3F /* RootView.swift */; };
 		B4E05DD22C0390BB00121D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E05DD12C0390BB00121D3F /* Assets.xcassets */; };
@@ -26,6 +29,7 @@
 		B4E05DFD2C03A89A00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05DFC2C03A89A00121D3F /* DevTools */; };
 		B4E05E012C03ACEF00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05E002C03ACEF00121D3F /* DevTools */; };
 		B4E6826A2C06007A005B907C /* mock1.json in Resources */ = {isa = PBXBuildFile; fileRef = B4E682692C06007A005B907C /* mock1.json */; };
+		B4F522A32C08AB7100A22F99 /* mock5.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F522A22C08AB7100A22F99 /* mock5.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,9 @@
 		B45B5BB72C05F84600B80339 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		B4BABA3E2C03CB7200CCC336 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4BABA422C03CDB300CCC336 /* KeyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyConstant.swift; sourceTree = "<group>"; };
+		B4CD4EEF2C07736F00034F41 /* mock2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock2.json; sourceTree = "<group>"; };
+		B4CD4EF12C077A1800034F41 /* mock3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock3.json; sourceTree = "<group>"; };
+		B4CD4EF32C07C74300034F41 /* mock4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock4.json; sourceTree = "<group>"; };
 		B4E05DCA2C0390BA00121D3F /* DomsWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomsWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E05DCD2C0390BA00121D3F /* DomsWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomsWeatherApp.swift; sourceTree = "<group>"; };
 		B4E05DCF2C0390BA00121D3F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -43,6 +50,7 @@
 		B4E05DD42C0390BB00121D3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4E05DD92C0390BB00121D3F /* DomsWeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DomsWeatherApp.xcdatamodel; sourceTree = "<group>"; };
 		B4E682692C06007A005B907C /* mock1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock1.json; sourceTree = "<group>"; };
+		B4F522A22C08AB7100A22F99 /* mock5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock5.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,10 @@
 				B45B5BAB2C05EFFB00B80339 /* MockJsons.swift */,
 				B45B5BAD2C05F33B00B80339 /* mock0.json */,
 				B4E682692C06007A005B907C /* mock1.json */,
+				B4CD4EEF2C07736F00034F41 /* mock2.json */,
+				B4CD4EF12C077A1800034F41 /* mock3.json */,
+				B4CD4EF32C07C74300034F41 /* mock4.json */,
+				B4F522A22C08AB7100A22F99 /* mock5.json */,
 			);
 			path = Mockdata;
 			sourceTree = "<group>";
@@ -210,9 +222,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E05DD52C0390BB00121D3F /* Preview Assets.xcassets in Resources */,
+				B4F522A32C08AB7100A22F99 /* mock5.json in Resources */,
+				B4CD4EF22C077A1800034F41 /* mock3.json in Resources */,
 				B4E6826A2C06007A005B907C /* mock1.json in Resources */,
+				B4CD4EF02C07736F00034F41 /* mock2.json in Resources */,
 				B4E05DD22C0390BB00121D3F /* Assets.xcassets in Resources */,
 				B45B5BAE2C05F33B00B80339 /* mock0.json in Resources */,
+				B4CD4EF42C07C74300034F41 /* mock4.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

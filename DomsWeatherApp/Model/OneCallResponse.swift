@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import DevTools
 
 struct OneCallResponse: Codable {
     var latitude: Float16
@@ -13,9 +14,16 @@ struct OneCallResponse: Codable {
     var timeZone: String
     var timeZoneOffset: Int16
     var current: Current
+    var hourly: [Current]
+
+    func hourlyToday() -> [Current] {
+        let endOfDay = (Date().endOfDay ?? Date()).timeIntervalSince1970 + 1
+
+        return hourly.filter { $0.timestamp <= Int64(endOfDay) }
+    }
 
     enum CodingKeys: String, CodingKey {
-        case current
+        case current, hourly
         case latitude = "lat"
         case longitude = "lon"
         case timeZone = "timezone"
@@ -28,15 +36,32 @@ struct OneCallResponse: Codable {
         var pressure: Int16
         var humidity: Int8
         var windSpeed: Float16
-        var datetime: Int32
-        var sunrise: Int32
-        var sunset: Int32
+        var timestamp: Int32
+        var sunrise: Int32?
+        var sunset: Int32?
+        var weather: [Weather]
+        var rain: Rain?
 
         enum CodingKeys: String, CodingKey {
-            case temp, pressure, humidity, sunrise, sunset
+            case temp, pressure, humidity, sunrise, sunset, weather, rain
             case feelsLikeTemp = "feels_like"
             case windSpeed = "wind_speed"
-            case datetime = "dt"
+            case timestamp = "dt"
+        }
+
+        struct Weather: Codable {
+            var id: Int
+            var main: String
+            var description: String
+            var icon: String
+        }
+
+        struct Rain: Codable {
+            var hour1: Float
+
+            enum CodingKeys: String, CodingKey {
+                case hour1 = "1h"
+            }
         }
     }
 }
