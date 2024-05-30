@@ -7,6 +7,7 @@
 
 import SwiftUI
 import DevTools
+import CachedAsyncImage
 
 struct RootView: View {
     @State private var api = WeatherApi.shared
@@ -37,22 +38,20 @@ struct RootView: View {
                                     .fill(.accentLight)
                                     .shadow(radius: 8)
 
-                                if let url = URL(string: "https://openweathermap.org/img/wn/\(firstWeather.icon)@2x.png") {
-                                    AsyncImage(url: url) { phase in
-                                        if let image = phase.image {
-                                            image
-                                                .resizable()
-                                                .scaledToFit()
-                                                .shadow(radius: 8)
+                                CachedAsyncImage(url: firstWeather.iconURL) { phase in
+                                    if let image = phase.image {
+                                        image
+                                            .resizable()
+                                            .scaledToFit()
+                                            .shadow(radius: 8)
 
-                                        } else if phase.error != nil {
-                                            Image(systemName: "cloud.rainbow.half.fill")
-                                                .symbolRenderingMode(.multicolor)
-                                                .symbolEffect(.variableColor)
-                                                .font(.system(size: 32))
-                                        } else {
-                                            ProgressView()
-                                        }
+                                    } else if phase.error != nil {
+                                        Image(systemName: "cloud.rainbow.half.fill")
+                                            .symbolRenderingMode(.multicolor)
+                                            .symbolEffect(.variableColor)
+                                            .font(.system(size: 32))
+                                    } else {
+                                        ProgressView()
                                     }
                                 }
                             }
@@ -63,13 +62,14 @@ struct RootView: View {
 
                         ScrollView(.horizontal) {
                             HStack {
+                                Divider()
+
                                 ForEach(weather.hourlyToday(), id: \.timestamp) { hour in
                                     VStack {
                                         Text(hour.timestamp.asDateString("HH:mm"))
 
-                                        if let firstWeather = hour.weather.first,
-                                           let url = URL(string: "https://openweathermap.org/img/wn/\(firstWeather.icon)@2x.png") {
-                                            AsyncImage(url: url) { phase in
+                                        if let firstWeather = hour.weather.first {
+                                            CachedAsyncImage(url: firstWeather.iconURL) { phase in
                                                 if let image = phase.image {
                                                     image
                                                         .resizable()
@@ -90,6 +90,8 @@ struct RootView: View {
                                         Text(String(format: "%.0f°C", locale: .current, Float(hour.temp)))
                                     }
                                     .frame(width: 100)
+
+                                    Divider()
                                 }
                             }
                         }

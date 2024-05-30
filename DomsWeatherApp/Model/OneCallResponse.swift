@@ -54,6 +54,7 @@ struct OneCallResponse: Codable {
             var main: String
             var description: String
             var icon: String
+            var iconURL: URL? { URL(string: "https://openweathermap.org/img/wn/\(icon)@2x.png") }
         }
 
         struct Rain: Codable {

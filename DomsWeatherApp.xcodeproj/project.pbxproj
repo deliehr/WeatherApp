@@ -30,6 +30,8 @@
 		B4E05E012C03ACEF00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05E002C03ACEF00121D3F /* DevTools */; };
 		B4E6826A2C06007A005B907C /* mock1.json in Resources */ = {isa = PBXBuildFile; fileRef = B4E682692C06007A005B907C /* mock1.json */; };
 		B4F522A32C08AB7100A22F99 /* mock5.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F522A22C08AB7100A22F99 /* mock5.json */; };
+		B4F522A62C08B46D00A22F99 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = B4F522A52C08B46D00A22F99 /* CachedAsyncImage */; };
+		B4F522A92C08B5A800A22F99 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F522A82C08B5A800A22F99 /* URLCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,7 @@
 		B4E05DD92C0390BB00121D3F /* DomsWeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DomsWeatherApp.xcdatamodel; sourceTree = "<group>"; };
 		B4E682692C06007A005B907C /* mock1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock1.json; sourceTree = "<group>"; };
 		B4F522A22C08AB7100A22F99 /* mock5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock5.json; sourceTree = "<group>"; };
+		B4F522A82C08B5A800A22F99 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				B4E05DF72C03A74700121D3F /* DevTools in Frameworks */,
 				B4E05DEB2C03A4B700121D3F /* DevTools in Frameworks */,
 				B4E05DF42C03A5B600121D3F /* DevTools in Frameworks */,
+				B4F522A62C08B46D00A22F99 /* CachedAsyncImage in Frameworks */,
 				B4E05E012C03ACEF00121D3F /* DevTools in Frameworks */,
 				B4E05DE52C039DF600121D3F /* DevTools in Frameworks */,
 			);
@@ -129,6 +133,7 @@
 		B4E05DCC2C0390BA00121D3F /* DomsWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B4F522A72C08B59F00A22F99 /* Extensions */,
 				B45B5BB42C05F79800B80339 /* Model */,
 				B45B5BB32C05F74300B80339 /* Views */,
 				B45B5BAF2C05F6A800B80339 /* Network */,
@@ -148,6 +153,14 @@
 				B4E05DD42C0390BB00121D3F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4F522A72C08B59F00A22F99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B4F522A82C08B5A800A22F99 /* URLCache.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +187,7 @@
 				B4E05DF62C03A74700121D3F /* DevTools */,
 				B4E05DFC2C03A89A00121D3F /* DevTools */,
 				B4E05E002C03ACEF00121D3F /* DevTools */,
+				B4F522A52C08B46D00A22F99 /* CachedAsyncImage */,
 			);
 			productName = DomsWeatherApp;
 			productReference = B4E05DCA2C0390BA00121D3F /* DomsWeatherApp.app */;
@@ -206,6 +220,7 @@
 			packageReferences = (
 				B4E05DFE2C03ACDB00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				B4E05DFF2C03ACEF00121D3F /* XCRemoteSwiftPackageReference "SwiftDevTools" */,
+				B4F522A42C08B46D00A22F99 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = B4E05DCB2C0390BA00121D3F /* Products */;
 			projectDirPath = "";
@@ -239,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F522A92C08B5A800A22F99 /* URLCache.swift in Sources */,
 				B4E05DD02C0390BA00121D3F /* RootView.swift in Sources */,
 				B4BABA432C03CDB300CCC336 /* KeyConstant.swift in Sources */,
 				B4E05DCE2C0390BA00121D3F /* DomsWeatherApp.swift in Sources */,
@@ -478,6 +494,14 @@
 				minimumVersion = 1.0.5;
 			};
 		};
+		B4F522A42C08B46D00A22F99 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -510,6 +534,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B4E05DFE2C03ACDB00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		B4F522A52C08B46D00A22F99 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4F522A42C08B46D00A22F99 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
