@@ -10,8 +10,10 @@ import DevTools
 import CachedAsyncImage
 
 struct RootView: View {
+    @Environment(\.scenePhase) private var scenePhase
+
+    @State private var monitor = NetworkMonitor.shared
     @State private var api = WeatherApi.shared
-    @State private var isLoading = false
 
     var body: some View {
         ZStack {
@@ -61,12 +63,22 @@ struct RootView: View {
                         Divider()
 
                         ScrollView(.horizontal) {
-                            HStack {
+                            HStack(alignment: .top) {
                                 Divider()
 
                                 ForEach(weather.hourlyToday(), id: \.timestamp) { hour in
                                     VStack {
-                                        Text(hour.timestamp.asDateString("HH:mm"))
+                                        HStack(alignment: .top, spacing: 0) {
+                                            Text(hour.timestamp.asDateString("HH:mm"))
+                                                .font(.system(size: 14))
+
+                                            Spacer(minLength: 0)
+
+                                            Text(String(format: "%.0f°C", locale: .current, Float(hour.temp)))
+                                                .font(.system(size: 22))
+                                                .padding(.top, -2)
+                                        }
+
 
                                         if let firstWeather = hour.weather.first {
                                             CachedAsyncImage(url: firstWeather.iconURL) { phase in
@@ -87,7 +99,13 @@ struct RootView: View {
                                             }
                                         }
 
-                                        Text(String(format: "%.0f°C", locale: .current, Float(hour.temp)))
+                                        if let rain = hour.rain {
+                                            getPrecipitationView(rain, forRain: true)
+                                        }
+
+                                        if let snow = hour.snow {
+                                            getPrecipitationView(snow, forRain: false)
+                                        }
                                     }
                                     .frame(width: 100)
 
@@ -100,23 +118,63 @@ struct RootView: View {
                     }
                     .padding()
                 }
+                .refreshable {
+                    loadToday()
+                }
             }
 
-            if isLoading {
+            if api.isLoading {
                 ProgressView()
+                    .padding()
+                    .background(Color.red)
+                    .clipShape(Circle())
             }
         }
         .task {
-            isLoading = true
+            await loadToday()
+        }
+        .onChange(of: monitor.isConnected) { connectedBefore, connectedNow in
+            guard !connectedBefore, connectedNow else { return }
 
-            do {
-                try await api.loadToday()
-            } catch {
-                debugPrint(error)
+            loadToday()
+        }
+        .onChange(of: scenePhase) { oldValue, newValue in
+            guard oldValue == .background, newValue == .active else { return }
+
+            loadToday()
+        }
+    }
+
+    private func loadToday() {
+        Task {
+            await loadToday()
+        }
+    }
+
+    private func loadToday() async {
+        do {
+            try await api.tryLoadToday()
+        } catch {
+            debugPrint(error)
+        }
+    }
+
+    private func getPrecipitationView(_ precipitation: OneCallResponse.Current.Precipitation,
+                                      forRain: Bool) -> some View {
+
+        HStack {
+            Image(systemName: forRain ? "cloud.rain.fill" : "")
+                .foregroundStyle(Color.accentColor)
+
+            if let hour1 = precipitation.hour1 {
+                Text(String(format: "%.1fmm / 1h", locale: .current, hour1))
+            } else if let hour3 = precipitation.hour3 {
+                Text(String(format: "%.1fmm / 3h", locale: .current, hour3))
             }
 
-            isLoading = false
+            Spacer()
         }
+        .font(.system(size: 12))
     }
 }
 

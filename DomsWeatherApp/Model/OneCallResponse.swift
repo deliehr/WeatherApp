@@ -8,18 +8,20 @@
 import Foundation
 import DevTools
 
+typealias Millimeter = Float
+
 struct OneCallResponse: Codable {
-    var latitude: Float16
-    var longitude: Float16
+    var latitude: Float
+    var longitude: Float
     var timeZone: String
-    var timeZoneOffset: Int16
+    var timeZoneOffset: Int
     var current: Current
     var hourly: [Current]
 
     func hourlyToday() -> [Current] {
-        let endOfDay = (Date().endOfDay ?? Date()).timeIntervalSince1970 + 1
+        let endOfNextDay = (Date().endOfDay?.adding(days: 1) ?? Date()).timeIntervalSince1970 + 1
 
-        return hourly.filter { $0.timestamp <= Int64(endOfDay) }
+        return hourly.filter { $0.timestamp <= Int64(endOfNextDay) }
     }
 
     enum CodingKeys: String, CodingKey {
@@ -31,16 +33,17 @@ struct OneCallResponse: Codable {
     }
 
     struct Current: Codable {
-        var temp: Float16
-        var feelsLikeTemp: Float16
-        var pressure: Int16
-        var humidity: Int8
-        var windSpeed: Float16
-        var timestamp: Int32
-        var sunrise: Int32?
-        var sunset: Int32?
+        var temp: Float
+        var feelsLikeTemp: Float
+        var pressure: Int
+        var humidity: Int
+        var windSpeed: Float
+        var timestamp: Int
+        var sunrise: Int?
+        var sunset: Int?
         var weather: [Weather]
-        var rain: Rain?
+        var rain: Precipitation?
+        var snow: Precipitation?
 
         enum CodingKeys: String, CodingKey {
             case temp, pressure, humidity, sunrise, sunset, weather, rain
@@ -57,11 +60,13 @@ struct OneCallResponse: Codable {
             var iconURL: URL? { URL(string: "https://openweathermap.org/img/wn/\(icon)@2x.png") }
         }
 
-        struct Rain: Codable {
-            var hour1: Float
+        struct Precipitation: Codable {
+            var hour1: Millimeter?      // Precipitation, mm/h
+            var hour3: Millimeter?      // Precipitation, mm/h
 
             enum CodingKeys: String, CodingKey {
                 case hour1 = "1h"
+                case hour3 = "3h"
             }
         }
     }

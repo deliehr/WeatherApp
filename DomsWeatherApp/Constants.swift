@@ -12,4 +12,10 @@ class Constants {
 
     static var apiKey: String { weatherApiKey }
     static let apiUrl = "https://api.openweathermap.org/data/3.0"
+
+    class UserDefaultsKeys {
+        private init() {}
+
+        static let lastOneCallResponse = "lastOneCallResponse"
+    }
 }

@@ -11,7 +11,7 @@ class MockJsons {
     private init() {}
 
     static let oneCallResult: String? = {
-        let mockFile = (0...5).map({ "mock\($0)" }).randomElement() ?? "mock0"
+        let mockFile = (0...7).map({ "mock\($0)" }).randomElement() ?? "mock0"
 
         guard let path = Bundle.main.path(forResource: mockFile, ofType: "json"),
                 let content = try? String(contentsOfFile: path, encoding: .utf8)

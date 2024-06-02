@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import DevTools
 
 @main
 struct DomsWeatherApp: App {
+    init() {
+        NetworkMonitor.shared.start()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()

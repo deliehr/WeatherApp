@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B435788C2C0BA89700F2FF1A /* mock6.json in Resources */ = {isa = PBXBuildFile; fileRef = B435788B2C0BA89700F2FF1A /* mock6.json */; };
+		B435788E2C0BAE0A00F2FF1A /* mock7.json in Resources */ = {isa = PBXBuildFile; fileRef = B435788D2C0BAE0A00F2FF1A /* mock7.json */; };
 		B45B5BAC2C05EFFB00B80339 /* MockJsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BAB2C05EFFB00B80339 /* MockJsons.swift */; };
 		B45B5BAE2C05F33B00B80339 /* mock0.json in Resources */ = {isa = PBXBuildFile; fileRef = B45B5BAD2C05F33B00B80339 /* mock0.json */; };
 		B45B5BB22C05F6C000B80339 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B5BB12C05F6C000B80339 /* WeatherApi.swift */; };
@@ -27,14 +29,16 @@
 		B4E05DF42C03A5B600121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05DF32C03A5B600121D3F /* DevTools */; };
 		B4E05DF72C03A74700121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05DF62C03A74700121D3F /* DevTools */; };
 		B4E05DFD2C03A89A00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05DFC2C03A89A00121D3F /* DevTools */; };
-		B4E05E012C03ACEF00121D3F /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4E05E002C03ACEF00121D3F /* DevTools */; };
 		B4E6826A2C06007A005B907C /* mock1.json in Resources */ = {isa = PBXBuildFile; fileRef = B4E682692C06007A005B907C /* mock1.json */; };
 		B4F522A32C08AB7100A22F99 /* mock5.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F522A22C08AB7100A22F99 /* mock5.json */; };
 		B4F522A62C08B46D00A22F99 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = B4F522A52C08B46D00A22F99 /* CachedAsyncImage */; };
 		B4F522A92C08B5A800A22F99 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F522A82C08B5A800A22F99 /* URLCache.swift */; };
+		B4F522AC2C08B8B000A22F99 /* DevTools in Frameworks */ = {isa = PBXBuildFile; productRef = B4F522AB2C08B8B000A22F99 /* DevTools */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B435788B2C0BA89700F2FF1A /* mock6.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock6.json; sourceTree = "<group>"; };
+		B435788D2C0BAE0A00F2FF1A /* mock7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock7.json; sourceTree = "<group>"; };
 		B45B5BAB2C05EFFB00B80339 /* MockJsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJsons.swift; sourceTree = "<group>"; };
 		B45B5BAD2C05F33B00B80339 /* mock0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock0.json; sourceTree = "<group>"; };
 		B45B5BB12C05F6C000B80339 /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
@@ -64,9 +68,9 @@
 				B4E05DFD2C03A89A00121D3F /* DevTools in Frameworks */,
 				B4E05DF72C03A74700121D3F /* DevTools in Frameworks */,
 				B4E05DEB2C03A4B700121D3F /* DevTools in Frameworks */,
+				B4F522AC2C08B8B000A22F99 /* DevTools in Frameworks */,
 				B4E05DF42C03A5B600121D3F /* DevTools in Frameworks */,
 				B4F522A62C08B46D00A22F99 /* CachedAsyncImage in Frameworks */,
-				B4E05E012C03ACEF00121D3F /* DevTools in Frameworks */,
 				B4E05DE52C039DF600121D3F /* DevTools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +98,8 @@
 				B4CD4EF12C077A1800034F41 /* mock3.json */,
 				B4CD4EF32C07C74300034F41 /* mock4.json */,
 				B4F522A22C08AB7100A22F99 /* mock5.json */,
+				B435788B2C0BA89700F2FF1A /* mock6.json */,
+				B435788D2C0BAE0A00F2FF1A /* mock7.json */,
 			);
 			path = Mockdata;
 			sourceTree = "<group>";
@@ -186,8 +192,8 @@
 				B4E05DF32C03A5B600121D3F /* DevTools */,
 				B4E05DF62C03A74700121D3F /* DevTools */,
 				B4E05DFC2C03A89A00121D3F /* DevTools */,
-				B4E05E002C03ACEF00121D3F /* DevTools */,
 				B4F522A52C08B46D00A22F99 /* CachedAsyncImage */,
+				B4F522AB2C08B8B000A22F99 /* DevTools */,
 			);
 			productName = DomsWeatherApp;
 			productReference = B4E05DCA2C0390BA00121D3F /* DomsWeatherApp.app */;
@@ -219,8 +225,8 @@
 			mainGroup = B4E05DC12C0390BA00121D3F;
 			packageReferences = (
 				B4E05DFE2C03ACDB00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */,
-				B4E05DFF2C03ACEF00121D3F /* XCRemoteSwiftPackageReference "SwiftDevTools" */,
 				B4F522A42C08B46D00A22F99 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				B4F522AA2C08B8B000A22F99 /* XCLocalSwiftPackageReference "../../SPM/DevTools" */,
 			);
 			productRefGroup = B4E05DCB2C0390BA00121D3F /* Products */;
 			projectDirPath = "";
@@ -240,8 +246,10 @@
 				B4F522A32C08AB7100A22F99 /* mock5.json in Resources */,
 				B4CD4EF22C077A1800034F41 /* mock3.json in Resources */,
 				B4E6826A2C06007A005B907C /* mock1.json in Resources */,
+				B435788C2C0BA89700F2FF1A /* mock6.json in Resources */,
 				B4CD4EF02C07736F00034F41 /* mock2.json in Resources */,
 				B4E05DD22C0390BB00121D3F /* Assets.xcassets in Resources */,
+				B435788E2C0BAE0A00F2FF1A /* mock7.json in Resources */,
 				B45B5BAE2C05F33B00B80339 /* mock0.json in Resources */,
 				B4CD4EF42C07C74300034F41 /* mock4.json in Resources */,
 			);
@@ -412,6 +420,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +450,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,6 +487,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		B4F522AA2C08B8B000A22F99 /* XCLocalSwiftPackageReference "../../SPM/DevTools" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../SPM/DevTools;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		B4E05DFE2C03ACDB00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -484,14 +501,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.55.1;
-			};
-		};
-		B4E05DFF2C03ACEF00121D3F /* XCRemoteSwiftPackageReference "SwiftDevTools" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/deliehr/SwiftDevTools";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.5;
 			};
 		};
 		B4F522A42C08B46D00A22F99 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
@@ -525,11 +534,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DevTools;
 		};
-		B4E05E002C03ACEF00121D3F /* DevTools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B4E05DFF2C03ACEF00121D3F /* XCRemoteSwiftPackageReference "SwiftDevTools" */;
-			productName = DevTools;
-		};
 		B4E05E022C03ACF800121D3F /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B4E05DFE2C03ACDB00121D3F /* XCRemoteSwiftPackageReference "SwiftLint" */;
@@ -539,6 +543,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B4F522A42C08B46D00A22F99 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		B4F522AB2C08B8B000A22F99 /* DevTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DevTools;
 		};
 /* End XCSwiftPackageProductDependency section */
 

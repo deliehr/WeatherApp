@@ -9,6 +9,7 @@ import Foundation
 
 protocol WeatherFetching {
     func loadToday() async throws -> OneCallResponse
+    func loadLastToday() async throws -> OneCallResponse
 }
 
 class Fetcher: WeatherFetching {
@@ -25,6 +26,14 @@ class Fetcher: WeatherFetching {
 
         return try JSONDecoder().decode(OneCallResponse.self, from: data)
     }
+
+    func loadLastToday() async throws -> OneCallResponse {
+        guard let json = UserDefaults.standard.string(forKey: Constants.UserDefaultsKeys.lastOneCallResponse),
+              let data = json.data(using: .utf8)
+        else { throw NetworkError.lastResponseNotExisting }
+
+        return try JSONDecoder().decode(OneCallResponse.self, from: data)
+    }
 }
 
 class MockFetcher: WeatherFetching {
@@ -33,10 +42,15 @@ class MockFetcher: WeatherFetching {
 
         return try JSONDecoder().decode(OneCallResponse.self, from: data)
     }
+
+    func loadLastToday() async throws -> OneCallResponse {
+        try await loadToday()
+    }
 }
 
 enum NetworkError: Error {
     case badRequestUrl
     case badResponse
     case noMockData
+    case lastResponseNotExisting
 }
