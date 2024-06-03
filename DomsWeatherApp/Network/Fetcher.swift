@@ -7,16 +7,23 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case badRequestUrl
+    case badResponse
+    case noMockData
+    case lastResponseNotExisting
+}
+
 protocol WeatherFetching {
     func loadToday() async throws -> OneCallResponse
     func loadLastToday() async throws -> OneCallResponse
 }
 
+// MARK: - default api data
+
 class Fetcher: WeatherFetching {
     func loadToday() async throws -> OneCallResponse {
-        guard let url = URL(string:
-                                "\(Constants.apiUrl)/onecall?lat=51.83&lon=8.14&units=metric&lang=de&appid=\(Constants.apiKey)")
-        else { throw NetworkError.badRequestUrl }
+        guard let url = createUrl(latitude: 51.83, longitude: 8.14) else { throw NetworkError.badRequestUrl }
 
         let (data, response) = try await URLSession.shared.data(from: url)
 
@@ -34,7 +41,18 @@ class Fetcher: WeatherFetching {
 
         return try JSONDecoder().decode(OneCallResponse.self, from: data)
     }
+
+    private func createUrl(latitude: Float, longitude: Float) -> URL? {
+        URL(string: "\(Constants.apiUrl)/onecall" +
+            "?lat=\(latitude)" +
+            "&lon=\(longitude)" +
+            "&units=metric" +
+            "&lang=de" +
+            "&appid=\(Constants.apiKey)")
+    }
 }
+
+// MARK: - mock data
 
 class MockFetcher: WeatherFetching {
     func loadToday() async throws -> OneCallResponse {
@@ -46,11 +64,4 @@ class MockFetcher: WeatherFetching {
     func loadLastToday() async throws -> OneCallResponse {
         try await loadToday()
     }
-}
-
-enum NetworkError: Error {
-    case badRequestUrl
-    case badResponse
-    case noMockData
-    case lastResponseNotExisting
 }
